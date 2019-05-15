@@ -14,6 +14,7 @@ class Payment:
             # remove the quickpay message
             description = description.replace('Quickpay With Zelle Payment From ', '')
             # finds the index of the space right before the number
+            #print(description)
             index = re.search('\d', description).start()
             # extract the name
             name = description[:index - 1]
